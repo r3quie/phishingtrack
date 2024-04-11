@@ -41,7 +41,7 @@ To use the script in my repo, you do not need to modify anything below the email
 * Use the generated passkey in the epass value in *sendmail.py*.
 
 ## Collecting the data
-So, we sent our emails and someone clicked our link. What happens now? A short JavaScript code will grab the *id* in the URL and simply send it as a comment to WordPress. You will need to change the action value which is now set to „https://www.yourweb.com/wp-comments-post2.php“ to the your path to the modified comments PHP file in the repo. The file is the same as the original WordPress file, except it redirects the user to a given URL (default set to google.com).
+So, we sent our emails and someone clicked our link. What happens now? A short JavaScript code will grab the *id* in the URL and simply send it as a comment to WordPress. **You will need to change the action value** which is now set to „https://www.yourweb.com/wp-comments-post2.php“ **to your path to the modified comments PHP file in the repo**. The file is the same as the original WordPress file, except it redirects the user to a given URL (default set to google.com).
 
 The script additionally appends 2 random characters at the end of the string to bypass the „duplicate comment“ error.
 
