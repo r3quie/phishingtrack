@@ -14,7 +14,7 @@ Becomes this:
 
 > https://www.pavelkadera.cz/phishing?id=cniryxnqren
 
-While the string in the *id* value might seem random, it is not. it is generated from the email address of the user. How do we get that address, you ask? Well, we already know it since we’re sending it to the user. 😉
+While the string in the *id* value might seem random, it is not. it is generated from the email address of the user. How do we get that address, you ask? Well, we already know it since we’re using it to send the email to the user. 😉
 
 We can send emails using an SMTP server, whether you choose to use Gmail like I did is up to you. I use Gmail to give users the opportunity to recognize a potentially hazardous email address.
 
