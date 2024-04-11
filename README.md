@@ -49,7 +49,7 @@ To allow users to click the link repeatedly in a short time you should also disa
 
 ### What you need to do
 
-* Use the HTML file in the repo on your page **with comments allowed**.
+* Use the HTML file in the repo on your page **with comments allowed**. The file can be inserted in the form of a "short code" block in WordPress.
 * Change action value to your domain and path to the .php file in the repo.
 * Change href value "_href="/PAGESLUG/#respond"_" in reply-title.
 
