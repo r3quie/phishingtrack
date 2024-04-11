@@ -47,6 +47,12 @@ The script additionally appends 2 random characters at the end of the string to 
 
 To allow users to click the link repeatedly in a short time you should also disallow WordPress‘ [comment flooding protection](http://r3quie.com/comment-flood-protection/).
 
+### What you need to do
+
+* Use the HTML file in the repo on your page **with comments allowed**.
+* Change action value to your domain and path to the .php file in the repo.
+* Change href value "_href="/PAGESLUG/#respond"_" in reply-title.
+
 ## Why WordPress comments?
 My web hosting does not allow me access to the Apache logs, I do however have access to the FTP in the www directory. Feel free to use Apache logs of course.
 
