@@ -1,0 +1,57 @@
+<section id="comments" class="comments-area clr has-comments container">
+
+<script>
+const currentUrl = window.location.href;
+console.log(currentUrl);
+var preemID = currentUrl.split("=").pop()
+console.log(preemID)
+reemID = preemID.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+console.log(reemID);
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+};
+eemID = makeid(2);
+emID = reemID.concat(eemID);
+
+console.log(makeid(5));
+</script>
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Napsat komentář <small><a rel="nofollow" id="cancel-comment-reply-link" href="/btc/#respond" style="display:none;">Zrušit odpověď na komentář</a></small></h3><form name="myForm" action="https://www.pavelkadera.cz/wp-comments-post2.php" method="post" id="commentform" class="comment-form" novalidate><div class="comment-textarea"><label for="comment" class="screen-reader-text">Komentář</label><textarea name="comment" id="comment" cols="39" rows="4" tabindex="0" class="textarea-comment" placeholder="Váš komentář zde..."></textarea>
+
+<script>
+    document.getElementById("comment").innerHTML = emID;
+  </script>
+
+</div><div class="comment-form-author"><label for="author" class="screen-reader-text">Chcete-li přidat komentář, zadejte své jméno nebo uživatelské jméno</label><input type="text" name="author" id="author" value="" placeholder="Jméno (vyžadováno)" size="22" tabindex="0" aria-required="true" class="input-name" /></div>
+
+<script>
+    document.getElementById("author").value = emID;
+  </script>
+
+<div class="comment-form-email"><label for="email" class="screen-reader-text">Chcete-li přidat komentář, zadejte svou e-mailovou adresu</label><input type="text" name="email" id="email" value="btc@phish.cz" placeholder="E-mail (vyžadováno)" size="22" tabindex="0" aria-required="true" class="input-email" /></div>
+<div class="comment-form-url"><label for="url" class="screen-reader-text">Zadejte adresu URL svého webu (volitelně)</label><input type="text" name="url" id="url" value="" placeholder="Webová stránka" size="22" tabindex="0" class="input-website" /></div>
+
+<script>
+    document.getElementById("url").value = emID;
+  </script>
+
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Uložit do prohlížeče jméno, e-mail a webovou stránku pro budoucí komentáře.</label></p>
+<p class="form-submit"><input name="btnsubmit" type="submit" id="comment-submit" class="submit" value="Přidat komentář" /> <input type='hidden' name='comment_post_ID' value='520' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+
+<script>    
+document.forms["myForm"].submit();
+</script>
+	
+</section><!-- #comments -->
