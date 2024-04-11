@@ -4,9 +4,9 @@ from __future__ import print_function
 import xlwings as xw
 
 def get_list():
-    ws = xw.Book("X:/dir/list.xlsx").sheets['list']
+    ws = xw.Book("X:/dir/FILENAME.xlsx").sheets['SHEETNAME']
 
-    v1 = ws.range("H7:H64").value
+    v1 = ws.range("A1:A64").value
 
     # Removes None values
     res = [i for i in v1 if i is not None]
