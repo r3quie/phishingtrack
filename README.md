@@ -45,7 +45,7 @@ So, we sent our emails and someone clicked our link. What happens now? A short J
 
 The script additionally appends 2 random characters at the end of the string to bypass the „duplicate comment“ error.
 
-To allow users to click the link repeatedly in a short time you should also disallow WordPress‘ comment flooding protection.
+To allow users to click the link repeatedly in a short time you should also disallow WordPress‘ [comment flooding protection](http://r3quie.com/comment-flood-protection/).
 
 ## Why WordPress comments?
 My web hosting does not allow me access to the Apache logs, I do however have access to the FTP in the www directory. Feel free to use Apache logs of course.
