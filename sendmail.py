@@ -66,7 +66,7 @@ while 0 < len(erecievel):
   em.attach(part2)
 
   ccontext = ssl.create_default_context()
-
+  # YOU WILL NEED TO CHANGE THE SMTP SERVER
   with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=ccontext) as smtp:
       smtp.login(esender, epass)
       smtp.sendmail(esender, erecieve, em.as_string())
