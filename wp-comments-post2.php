@@ -54,7 +54,7 @@ $cookies_consent = ( isset( $_POST['wp-comment-cookies-consent'] ) );
  */
 do_action( 'set_comment_cookies', $comment, $user, $cookies_consent );
 
-$location = "https://eagri.cz/public/portal/cpi";
+$location = "https://google.com/";
 
 // If user didn't consent to cookies, add specific query arguments to display the awaiting moderation message.
 if ( ! $cookies_consent && 'unapproved' === wp_get_comment_status( $comment ) && ! empty( $comment->comment_author_email ) ) {
