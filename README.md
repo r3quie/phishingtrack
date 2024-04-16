@@ -30,6 +30,8 @@ It pops the first value from the list and uses the return (pop function returns 
 ### MIMEText
 We’re then using the MIMEText library. I won’t go into much detail here, as many others already have. Just remember to use the 465 port for SSL. Alternatively, find the corresponding ports for TSL or others.
 
+The important thing is that you either need to import your HTML message from a different file or paste into the html variable in *sendmail.py*. You can generate an HTML message in Thunderbird or MS Word (in MS Word you can simply save the file as .html).
+
 ### SMTP server, Gmail
 If you wish to use your own SMTP server or a different one, parts of this guide might still help you. This is, however, specifically written to assist with sending emails through Gmail.
 
