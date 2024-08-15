@@ -14,7 +14,7 @@ abc = "abcdefghijklmnopqrstuvwxyz"
 while 0 < len(erecievel):
   print(len(erecievel))
   erecieve = erecievel.pop(0)
-  emID = erecieve[:-10] # Removes last **10** characters of the adress. ##### YOU NEED TO CHANGE THIS NUMBER TO FIT YOUR ORG'S DOMAIN CHAR LENGHT + @ ##### there's probably a better solution to this, too lazy rn, feel free to submit a pull request
+  emID = erecieve.split("@")[0]
   rotemID = "".join([abc[(abc.find(c)+13)%26] for c in emID])
 
   subject = "2000 USD allowance"
