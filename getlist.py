@@ -3,10 +3,10 @@ from __future__ import print_function
 # import time
 import xlwings as xw
 
-def get_list():
-    ws = xw.Book("X:/dir/FILENAME.xlsx").sheets['SHEETNAME']
+def get_list(path, sheet):
+    ws = xw.Book(path).sheets[sheet]
 
-    v1 = ws.range("A1:A64").value
+    v1 = ws.range("H1:H65").value
 
     # Removes None values
     res = [i for i in v1 if i is not None]
@@ -14,4 +14,4 @@ def get_list():
     print(res)
 
 if __name__ == '__main__':
-    get_list()
+    get_list(input("Enter file name or path:\n"), input("Enter sheet name:\n"))
