@@ -43,11 +43,13 @@ To use the script in my repo, you do not need to modify anything below the email
 * Use the generated passkey in the epass value in *sendmail.py*.
 
 ## Collecting the data
-So, we sent our emails and someone clicked our link. What happens now? A short JavaScript code will grab the *id* in the URL and simply send it as a comment to WordPress. **You will need to change the action value** which is now set to „https://www.yourweb.com/wp-comments-post2.php“ **to your path to the modified comments PHP file in the repo**. The file is the same as the original WordPress file, except it redirects the user to a given URL (default set to google.com).
+So, we sent our emails and someone clicked our link. What happens now? We simply view our webserver access logs. You can use the scripts _scanlogs_ to get an email notfication whenever someone clicks. 
+
+Alternatively, you can use WordPress comments. A short JavaScript code will grab the *id* in the URL and simply send it as a comment to WordPress. **You will need to change the action value** which is now set to „https://www.yourweb.com/wp-comments-post2.php“ **to your path to the modified comments PHP file in the repo**. The file is the same as the original WordPress file, except it redirects the user to a given URL (default set to google.com).
 
 The script additionally appends 2 random characters at the end of the string to bypass the „duplicate comment“ error.
 
-To allow users to click the link repeatedly in a short time you should also disallow WordPress‘ [comment flooding protection](http://r3quie.com/comment-flood-protection/).
+To allow users to click the link repeatedly in a short succession you should also disallow WordPress‘ [comment flooding protection](http://r3quie.com/comment-flood-protection/).
 
 ### What you need to do
 
@@ -56,6 +58,6 @@ To allow users to click the link repeatedly in a short time you should also disa
 * Change href value "_href="/PAGESLUG/#respond"_" in reply-title.
 
 ## Why WordPress comments?
-My web hosting does not allow me access to the Apache logs, I do however have access to the FTP in the www directory. Feel free to use Apache logs of course.
+If your web hosting does not allow you access to Apache/NGINX logs, you might have access to FTP, hence you'll be able to acess the www directory.
 
 Using WordPress comments also allows you to collect data through SQL.
